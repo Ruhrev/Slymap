@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport"
+        content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <script src="js/script.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <nav id="navbar" class="">
+        <div class="nav-wrapper">
+            <div class="logo">
+                <p id="logo-text">map</p>
+            </div>
+            <div class="nav-menu-wrapper">
+                <ul id="menu">
+                    <li><a href="#" class="maplink" data-bg="/media/maps/customs.webp">customs</a></li>
+                    <li><a href="#" class="maplink" data-bg="/media/maps/factory.webp">factory</a></li>
+                    <li><a href="#" class="maplink" data-bg="/media/maps/interchange.webp">interchange</a></li>
+                    <li><a href="#" class="maplink" data-bg="/media/maps/lighthouse.webp">lighthouse</a></li>
+                    <li><a href="#" class="maplink" data-bg="/media/maps/reserve.webp">reserve</a></li>
+                    <li><a href="#" class="maplink" data-bg="/media/maps/shoreline.webp">shoreline</a></li>
+                    <li><a href="#" class="maplink" data-bg="/media/maps/streets.webp">streets</a></li>
+                    <li><a href="#" class="maplink" data-bg="/media/maps/thelab.webp">the lab</a></li>
+                    <li><a href="#" class="maplink" data-bg="/media/maps/woods.webp">woods</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="menuIcon">
+        <span class="icon icon-bars"></span>
+        <span class="icon icon-bars overlay"></span>
+    </div>
+    <div class="overlay-menu">
+        <ul id="overlay-menu-list">
+            <li><a href="#" class="maplink" data-bg="/media/maps/customs.webp">customs</a></li>
+            <li><a href="#" class="maplink" data-bg="/media/maps/factory.webp">factory</a></li>
+            <li><a href="#" class="maplink" data-bg="/media/maps/interchange.webp">interchange</a></li>
+            <li><a href="#" class="maplink" data-bg="/media/maps/lighthouse.webp">lighthouse</a></li>
+            <li><a href="#" class="maplink" data-bg="/media/maps/reserve.webp">reserve</a></li>
+            <li><a href="#" class="maplink" data-bg="/media/maps/shoreline.webp">shoreline</a></li>
+            <li><a href="#" class="maplink" data-bg="/media/maps/streets.webp">streets</a></li>
+            <li><a href="#" class="maplink" data-bg="/media/maps/thelab.webp">the lab</a></li>
+            <li><a href="#" class="maplink" data-bg="/media/maps/woods.webp">woods</a></li>
+        </ul>
+    </div>
+    <div id="map-wrapper">
+        <div id="map"></div>
+    </div>
+    <div id="below-button-wrapper">
+        <button id="reset-button"></button>
+        <button class="color-button" id="white-button" data-color="white"></button>
+        <button class="color-button" id="black-button" data-color="black"></button>
+        <button class="color-button" id="red-button" data-color="#f74c36"></button>
+        <button class="color-button" id="green-button" data-color="#50fc4a"></button>
+        <button class="color-button" id="blue-button" data-color="#077bff"></button>
+    </div>
+
+</body>
+
+</html>
