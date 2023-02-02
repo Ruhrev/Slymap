@@ -11,9 +11,9 @@ window.onload = function () {
         [-85.6308812772077, -502.3858087753562]
     ]);
 
-    const maplink = document.querySelectorAll(".maplink");
-    const colorbuttons = document.querySelectorAll(".color-button");
-    const resetbuttons = document.querySelectorAll("#reset-button");
+    const maplink = document.querySelectorAll('.maplink');
+    const colorbuttons = document.querySelectorAll('.color-button');
+    const resetbuttons = document.querySelectorAll('#reset-button');
 
     var imageUrl = '/media/maps/customs.webp';
     var imageBounds = [[-400, -500], [90, 180]];
@@ -21,13 +21,13 @@ window.onload = function () {
     var imageOverlay = L.imageOverlay(imageUrl, imageBounds).addTo(map);
 
     var socket = io();
-    var color = "#000000";
+    var color = '#000000';
 
     socket.on('marker placed', function (data) {
         dataCoords = data.coords.coords
         dataColor = data.coords.color
         if (!dataCoords || !dataColor) {
-            console.log("Received invalid data:", data);
+            console.log('Received invalid data:', data);
             return;
         }
 
@@ -75,8 +75,8 @@ window.onload = function () {
             event.preventDefault();
             clearMarkers();
             const imgUrl = event.target.dataset.bg;
-            /*const mapName = imgUrl.split("/").pop().split(".")[0];*/
-            /*document.getElementById("map-title").innerHTML = mapName;*/
+            /*const mapName = imgUrl.split('/').pop().split('.')[0];*/
+            /*document.getElementById('map-title').innerHTML = mapName;*/
             if (map.hasLayer(imageOverlay)) {
                 map.removeLayer(imageOverlay);
             }

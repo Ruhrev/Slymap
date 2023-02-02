@@ -11,7 +11,7 @@ io.on('connection', function (socket) {
     console.log(`A user has connected. Total connected users: ${connectedUsers}`);
 
     socket.on('user color', function (color) {
-        console.log("socket server side color: ", color)
+        console.log('socket server side color: ', color)
         userColors[socket.id] = color;
     });
 
@@ -34,18 +34,18 @@ app.use(express.static('public'));
 app.use('/media', express.static(__dirname + '/media'));
 app.use('/socket.io', express.static(__dirname + '/node_modules/socket.io/client-dist/'));
 
-app.get("/", function (_, res) {
-    res.sendFile(__dirname + "/index.html");
+app.get('/', function (_, res) {
+    res.sendFile(__dirname + '/index.html');
 });
 
-app.get("/css/style.css", function (req, res) {
+app.get('/css/style.css', function (req, res) {
     res.setHeader('Content-Type', 'text/css');
-    res.sendFile(__dirname + "/css/style.css");
+    res.sendFile(__dirname + '/css/style.css');
 });
 
-app.get("/js/script.js", function (req, res) {
+app.get('/js/script.js', function (req, res) {
     res.setHeader('Content-Type', 'text/javascript');
-    res.sendFile(__dirname + "/js/script.js");
+    res.sendFile(__dirname + '/js/script.js');
 });
 
 server.listen(3000, function () {
